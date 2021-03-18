@@ -4,9 +4,38 @@
     <meta charset="utf-8">
     <title>Expression of Imagination</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Experiment/ex1.css">
+    <script>
+    var check = -1;
+
+    function DarkMode(check) {
+      if (check == 1) {
+        document.querySelector('html').style.backgroundColor = '#202020';
+        document.querySelector('body').style.color = '#f5f5dc';
+        var All_a = document.querySelectorAll('a');
+        for (var i = 0; i<All_a.length; i++){
+          All_a[i].style.color = '#f5f5dc';
+        }
+        document.querySelector('h1').style.borderBottom = '3px solid #f5f5dc';
+        document.querySelector('ol').style.borderRight = '3px solid #f5f5dc';
+      }
+
+      else {
+        document.querySelector('html').style.backgroundColor = '#f5f5dc';
+        document.querySelector('body').style.color = '#202020';
+        var All_a = document.querySelectorAll('a');
+        for (var i = 0; i<All_a.length; i++){
+          All_a[i].style.color = '#202020';
+        }
+        document.querySelector('h1').style.borderBottom = '3px solid #202020';
+        document.querySelector('ol').style.borderRight = '3px solid #202020';
+      }
+    }
+    </script>
   </head>
   <body>
     <h1 style="text-align:center"><a href="index.html">Portfolio</a></h1>
+
     <div class="grid">
         <ol>
           <li><a href="WEB.html">WEB</a></li>
@@ -26,6 +55,24 @@
           <img src="picture1.jpg" alt="picture1" width="70%">
         </div>
     </div>
+    <div class="toggleWrap">
+      <span>Night Mode</span>
+      <input type="checkbox" id="toggle_alarm" name="" value="" onclick="check *= -1;DarkMode(check);"/>
+      <div>
+        <label for="toggle_alarm">
+          <span />
+        </label>
+      </div>
+    <!-- <input type="button" value="Night Mode" onclick="
+      document.querySelector('html').style.backgroundColor = '#202020';
+      document.querySelector('body').style.color = '#f5f5dc';
+      var All_a = document.querySelectorAll('a');
+      for (var i = 0; i<All_a.length; i++){
+        All_a[i].style.color = '#f5f5dc';
+      }
+      document.querySelector('h1').style.borderBottom = '3px solid #f5f5dc';
+      document.querySelector('ol').style.borderRight = '3px solid #f5f5dc';
+    "> -->
 
   </body>
 </html>
